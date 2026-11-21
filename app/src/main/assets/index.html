@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<title>Mobile Robot</title>
+<link rel="stylesheet" href="app.css">
+</head>
+<body>
+<header>
+  <select id="dev"></select>
+  <button id="conn">Connect</button>
+  <span id="st" class="chip">offline</span>
+  <span id="mode" class="chip">MAN</span>
+  <span id="dist" class="chip">-- cm</span>
+  <span id="err" class="chip hide"></span>
+  <button id="estop">STOP</button>
+</header>
+<nav>
+  <button data-t="drive" class="on">Drive</button>
+  <button data-t="arm">Arm</button>
+  <button data-t="voice">Voice</button>
+</nav>
+
+<section id="drive" class="tab on">
+  <div class="pad">
+    <div id="joy"><div id="knob"></div></div>
+    <label>Speed <input id="spd" type="range" min="20" max="100" value="60"></label>
+  </div>
+  <div class="cam">
+    <img id="cam" alt="camera">
+    <div class="row">
+      <button id="camBtn">Camera on/off</button>
+      <button id="auto">AUTO: off</button>
+    </div>
+    <small>Camera: join the Wi-Fi ROBOT-CAM (the stream is at 192.168.4.1/stream). Bluetooth stays connected.</small>
+  </div>
+</section>
+
+<section id="arm" class="tab">
+  <div id="joints"></div>
+  <div class="row">
+    <button id="home">Home</button>
+    <label>Speed <input id="aspd" type="range" min="20" max="100" value="50"></label>
+  </div>
+</section>
+
+<section id="voice" class="tab">
+  <div class="row">
+    <button id="mic">Listen</button>
+    <select id="lang"><option value="ar-EG">Arabic</option><option value="en-US">English</option></select>
+    <span id="sel" class="chip">part: -</span>
+  </div>
+  <div id="heard">Say: part + direction. Example: "elbow down", "كوع تحت", "car forward", "عربية قدام".</div>
+  <div id="help"></div>
+</section>
+
+<div id="lock" class="hide">STOPPED <button id="unlock">Release</button></div>
+<script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent;user-select:none}
+html,body{margin:0;height:100%;background:#12151b;color:#e8ecf2;font-family:system-ui,sans-serif;font-size:15px}
+header,nav{display:flex;gap:6px;align-items:center;padding:6px 8px;background:#1a1f29}
+nav{background:#161a22}
+button,select{font:inherit;color:#e8ecf2;background:#2a3140;border:1px solid #3a4356;border-radius:8px;padding:8px 12px}
+button.on{background:#2f6fdc;border-color:#2f6fdc}
+.chip{padding:4px 10px;border-radius:99px;background:#2a3140;font-size:13px}
+.chip.ok{background:#1f7a45}.chip.bad{background:#a83232}.chip.warn{background:#a86a12}
+.hide{display:none!important}
+#estop{margin-left:auto;background:#d0302f;border-color:#ff6b6b;font-weight:700;padding:10px 22px}
+.tab{display:none;padding:10px}.tab.on{display:flex;gap:12px;flex-wrap:wrap}
+#arm.on,#voice.on{flex-direction:column}
+.pad{display:flex;flex-direction:column;gap:10px;align-items:center}
+#joy{position:relative;width:220px;height:220px;border-radius:50%;background:#1f2633;border:2px solid #3a4356;touch-action:none}
+#knob{position:absolute;width:80px;height:80px;border-radius:50%;background:#2f6fdc;left:70px;top:70px}
+.cam{flex:1;min-width:240px;display:flex;flex-direction:column;gap:6px}
+#cam{width:100%;max-height:48vh;object-fit:contain;background:#000;border-radius:8px}
+.row{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+#auto.on{background:#1f7a45;border-color:#1f7a45}
+small{color:#9aa7b8}
+.joint{display:flex;gap:8px;align-items:center}
+.joint b{width:84px}.joint button{flex:1;padding:14px 0;touch-action:none}
+.joint label{font-size:12px;color:#9aa7b8;white-space:nowrap}
+#heard{padding:12px;border-radius:8px;background:#1f2633;min-height:56px}
+#heard.bad{background:#5b2020}#heard.ok{background:#1d4a2e}
+#help{font-size:13px;color:#9aa7b8;line-height:1.7}
+#lock{position:fixed;inset:0;background:rgba(160,20,20,.93);display:flex;gap:16px;align-items:center;justify-content:center;font-size:30px;font-weight:700;z-index:9}
